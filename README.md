@@ -16,6 +16,11 @@ Based on the ideas from [4commerce:env-settings],
 [pm2-meteor]: https://github.com/andruschka/pm2-meteor
 [git-crypt]:https://github.com/AGWA/git-crypt
 
+### Demo
+
+See [this repository](https://github.com/JutoApp/meteor-juto-config-demo) for an example meteor project that uses this 
+package.
+
 ### Background
 
 [node-config] is great for pure node applications, and [4commerce:env-settings] is useful
