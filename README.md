@@ -1,24 +1,24 @@
 juto:config
 ===
 
-Configure meteor using [node-config], 
+Configure meteor using [node-config][node-config], 
 allowing you to split your development and production meteor settings JSON.
 
-Based on the ideas from [4commerce:env-settings],
+Based on the ideas from [4commerce:env-settings][4commerce:env-settings],
  this provides a meteor build plugin so that you can use it as part of a `meteor build` command.
 
 ### Background
 
-[node-config] is great for pure node applications, and [4commerce:env-settings] is useful
+[node-config][node-config] is great for pure node applications, and [4commerce:env-settings][4commerce:env-settings] is useful
  for meteor while in development.
    
 However, when it comes to building your meteor application for deployment, if you have a cordova app 
-then you can't use [4commerce:env-settings]. This is due to a limitation of meteor's build tool, 
+then you can't use [4commerce:env-settings][4commerce:env-settings]. This is due to a limitation of meteor's build tool, 
 which expects a settings file. From that settings file, the Meteor.settings.public object is extracted
 and copied to the mobile application.
 
-[juto:config] works around this limitation by providing a build plugin, which generates the settings 
-json file needed by the ```meteor build``` command. It uses [node-config] to do this.
+[juto:config][juto:config] works around this limitation by providing a build plugin, which generates the settings 
+json file needed by the ```meteor build``` command. It uses [node-config][node-config] to do this.
 
 ### Getting started
 
@@ -75,7 +75,7 @@ when your app is in production:
     
     ```
     
-7. Tell [juto:config] about your setup by creating a ```juto-settings-config.json``` file:
+7. Tell [juto:config][juto:config] about your setup by creating a ```juto-settings-config.json``` file:
 
     ```json
     {
@@ -97,7 +97,7 @@ when your app is in production:
      
     Note that ```settings-production.json``` file doesn't need to be 
     generated yet for you to be able to pass it to a ```meteor build```
-    command; since [juto:config] provides a meteor build plugin, the 
+    command; since [juto:config][juto:config] provides a meteor build plugin, the 
      file will be generated just before it is needed. So you should be
      able to use this in a continuous integration environment.
      
@@ -154,7 +154,7 @@ Client - production :
      
 ### Deployment tools (mup, pm2-meteor etc)
     
-If you're using [mup], [mupx], [pm2-meteor] or some other deployment tool,
+If you're using [mup][mup], [mupx][mupx], [pm2-meteor][pm2-meteor] or some other deployment tool,
  just symlink ```settings-production.json``` to your required settings file 
  (or ```settings-development.json``` if it's destined for a development server). E.g.:
  
@@ -184,7 +184,7 @@ settings-production.json
 
 ##### Option 2 - encrypt them
 
-Use [git-crypt] or similar, e.g.
+Use [git-crypt][git-crypt] or similar, e.g.
 
 ```
 git-crypt init
@@ -192,11 +192,16 @@ echo 'private/config/production.json filter=git-crypt diff=git-crypt' >> .gitatt
 echo 'settings-production.json filter=git-crypt diff=git-crypt' >> .gitattributes 
 ```
 
-[node-config]:https://www.npmjs.com/package/config
-[4commerce:env-settings]:https://github.com/4commerce-technologies-AG/meteor-package-env-settings
-[juto:config]:https://github.com/jutoapp/meteor-juto-config
-[mup]:https://github.com/kadirahq/meteor-up
-[mupx]:https://github.com/arunoda/meteor-up/tree/mupx
-[pm2-meteor]:https://github.com/andruschka/pm2-meteor
-[git-crypt]:https://github.com/AGWA/git-crypt
+[node-config]: https://www.npmjs.com/package/config
 
+[4commerce:env-settings]: https://github.com/4commerce-technologies-AG/meteor-package-env-settings
+
+[juto:config]: https://github.com/jutoapp/meteor-juto-config
+
+[mup]: https://github.com/kadirahq/meteor-up
+
+[mupx]: https://github.com/arunoda/meteor-up/tree/mupx
+
+[pm2-meteor]: https://github.com/andruschka/pm2-meteor
+
+[git-crypt]: https://github.com/AGWA/git-crypt
