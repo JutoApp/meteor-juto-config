@@ -1,6 +1,6 @@
 Package.describe({
   name: 'juto:config',
-  version: '1.0.2',
+  version: '1.0.3',
   // Brief, one-line summary of the package.
   summary: 'Use node config package for meteor settings.',
   // URL to the Git repository containing the source code for this package.
