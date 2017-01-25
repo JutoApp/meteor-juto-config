@@ -4,7 +4,7 @@ Plugin.registerCompiler({
   filenames: ['juto-settings-config.json']
 }, function () {
 
-  let fs = require('fs');
+  let fs = require('fs-extra');
   let path = require('path');
 
   function JSONSettingsCompiler() {
@@ -47,7 +47,7 @@ Plugin.registerCompiler({
         publicConfig = loadedAndMergedConfigObj.public;
         configToWrite = _.deepExtend({}, serverConfig, true);
         configToWrite.public = publicConfig;
-        fs.writeFileSync(fileOutputPath, JSON.stringify(configToWrite, null, 2));
+        fs.writeJsonSync(fileOutputPath, configToWrite);
         process.env.NODE_ENV = oldProcessNodeEnv;
       }
 
@@ -60,7 +60,12 @@ Plugin.registerCompiler({
 
         fileOutputPath = process.env.PWD + "/" + ourConfig.settingsProduction;
         configSourcePath = process.env.PWD + "/private" + ourConfig.configSourcePathInPrivate;
-        loadConfigAndWriteOutput("production", configSourcePath, fileOutputPath);
+        try {
+          loadConfigAndWriteOutput("production", configSourcePath, fileOutputPath);
+        } catch (e) {
+          console.log("Couldn't parse production config.");
+          console.error(e);
+        }
         // do the same for "development"
         fileOutputPath = process.env.PWD + "/" + ourConfig.settingsDevelopment;
         loadConfigAndWriteOutput("development", configSourcePath, fileOutputPath);

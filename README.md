@@ -7,8 +7,11 @@ allowing you to split your development and production meteor settings JSON.
 Based on the ideas from [4commerce:env-settings],
  this provides a meteor build plugin so that you can use it as part of a `meteor build` command.
 
+***NOTE: This package currently uses [config-gitcrypt] instead of [node-config] , 
+ in order to provide [git-crypt] support.***
 
 [node-config]: https://www.npmjs.com/package/config
+[config-gitcrypt]: https://www.npmjs.com/package/config-gitcrypt
 [4commerce:env-settings]: https://github.com/4commerce-technologies-AG/meteor-package-env-settings
 [juto:config]: https://github.com/jutoapp/meteor-juto-config
 [mup]: https://github.com/kadirahq/meteor-up

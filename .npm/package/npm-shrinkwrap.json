@@ -1,9 +1,9 @@
 {
   "dependencies": {
-    "config": {
+    "config-gitcrypt": {
       "version": "1.24.0",
-      "resolved": "https://registry.npmjs.org/config/-/config-1.24.0.tgz",
-      "from": "config@1.24.0"
+      "resolved": "https://registry.npmjs.org/config-gitcrypt/-/config-gitcrypt-1.24.0.tgz",
+      "from": "config-gitcrypt@1.24.0"
     },
     "json5": {
       "version": "0.4.0",

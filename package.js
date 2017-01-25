@@ -1,6 +1,6 @@
 Package.describe({
   name: 'juto:config',
-  version: '1.0.0',
+  version: '1.0.1',
   // Brief, one-line summary of the package.
   summary: 'Use node config package for meteor settings.',
   // URL to the Git repository containing the source code for this package.
@@ -11,7 +11,7 @@ Package.describe({
 });
 
 Npm.depends({
-  config: "1.24.0"
+  "config-gitcrypt": "1.24.0"
 });
 
 Package.registerBuildPlugin({
@@ -26,7 +26,7 @@ Package.registerBuildPlugin({
     'plugin.js'
   ],
   npmDependencies: {
-    config: "1.24.0",
+    "config-gitcrypt": "1.24.0",
     "fs-extra": "2.0.0"
   }
 });

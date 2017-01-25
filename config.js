@@ -1,6 +1,6 @@
 // ==== node-config package, with suppressed warning.
 process.env.SUPPRESS_NO_CONFIG_WARNING = true;
-let config = require('config');
+let config = require('config-gitcrypt');
 process.env.SUPPRESS_NO_CONFIG_WARNING = false;
 
 
