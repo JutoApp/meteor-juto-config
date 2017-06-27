@@ -168,6 +168,20 @@ Client - production :
 }
 
 ```
+
+### Running meteor with limited access ###
+
+Now when you run meteor as a developer who does ***NOT*** have their GPG key in the list of allowed keys (i.e. the files are encrypted from your point of view), you will receive an error.
+
+```
+ERROR: /Users/mikecunneen/Documents/Development/Juto/app-builder/private/config/production.json is a git-crypt file and CONFIG_SKIP_GITCRYPT is not set.
+```
+
+You will need to set the environment var CONFIG_SKIP_GITCRYPT=1 to skip encrypted git-crypt files e.g. :
+
+```
+CONFIG_SKIP_GITCRYPT=1 meteor --port 4000
+``` 
      
 ### Deployment tools (mup, pm2-meteor etc)
     
