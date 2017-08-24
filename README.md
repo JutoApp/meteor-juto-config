@@ -96,7 +96,7 @@ when your app is in production:
 
     ```json
     {
-        "configSourcePathInPrivate":"/config",
+        "configSourcePath":"private/config",
         "outputSettingsFiles":true,
         "settingsProduction":"settings-production.json",
         "settingsDevelopment":"settings-development.json"

@@ -59,7 +59,8 @@ Plugin.registerCompiler({
         ourConfig = JSON.parse(file.getContentsAsString());
 
         fileOutputPath = process.env.PWD + "/" + ourConfig.settingsProduction;
-        configSourcePath = process.env.PWD + "/private" + ourConfig.configSourcePathInPrivate;
+        configSourcePath = process.env.PWD + "/" + ourConfig.configSourcePath;
+
         try {
           loadConfigAndWriteOutput("production", configSourcePath, fileOutputPath);
         } catch (e) {
