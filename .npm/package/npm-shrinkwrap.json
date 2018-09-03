@@ -1,29 +1,30 @@
 {
+  "lockfileVersion": 1,
   "dependencies": {
     "config-gitcrypt": {
       "version": "1.24.0",
       "resolved": "https://registry.npmjs.org/config-gitcrypt/-/config-gitcrypt-1.24.0.tgz",
-      "from": "config-gitcrypt@1.24.0"
+      "integrity": "sha1-u9TyDNXJel5K2t33KAlwpbucbNI="
     },
     "fs-extra": {
       "version": "2.0.0",
       "resolved": "https://registry.npmjs.org/fs-extra/-/fs-extra-2.0.0.tgz",
-      "from": "fs-extra@2.0.0"
+      "integrity": "sha1-M3NSve1KC3FPPrhN6M6nZenTdgA="
     },
     "graceful-fs": {
       "version": "4.1.11",
       "resolved": "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.1.11.tgz",
-      "from": "graceful-fs@>=4.1.2 <5.0.0"
+      "integrity": "sha1-Dovf5NHduIVNZOBOp8AOKgJuVlg="
     },
     "json5": {
       "version": "0.4.0",
       "resolved": "https://registry.npmjs.org/json5/-/json5-0.4.0.tgz",
-      "from": "json5@0.4.0"
+      "integrity": "sha1-BUNS5MTIDIbAkjh31EneF2pzLI0="
     },
     "jsonfile": {
       "version": "2.4.0",
       "resolved": "https://registry.npmjs.org/jsonfile/-/jsonfile-2.4.0.tgz",
-      "from": "jsonfile@>=2.1.0 <3.0.0"
+      "integrity": "sha1-NzaitCi4e72gzIO1P6PWM6NcKug="
     }
   }
 }

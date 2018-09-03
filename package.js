@@ -1,6 +1,6 @@
 Package.describe({
   name: 'juto:config',
-  version: '2.0.0',
+  version: '2.0.2',
   // Brief, one-line summary of the package.
   summary: 'Use node config package for meteor settings.',
   // URL to the Git repository containing the source code for this package.
@@ -20,7 +20,7 @@ Package.registerBuildPlugin({
   use: [
     'ecmascript',
     'underscore',
-    'meteorblackbelt:underscore-deep@0.0.4'
+    'juto:underscore-deep@0.0.5'
     ],
   sources: [
     'config.js',
@@ -38,7 +38,7 @@ Package.onUse(function(api) {
   api.use([
     'ecmascript',
     'underscore',
-    'meteorblackbelt:underscore-deep@0.0.4'
+    'juto:underscore-deep@0.0.5'
     ]);
   api.mainModule('config.js','server');
   api.export('JutoConfig');
