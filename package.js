@@ -1,6 +1,6 @@
 Package.describe({
   name: 'juto:config',
-  version: '2.0.2',
+  version: '2.0.3',
   // Brief, one-line summary of the package.
   summary: 'Use node config package for meteor settings.',
   // URL to the Git repository containing the source code for this package.
@@ -28,7 +28,16 @@ Package.registerBuildPlugin({
   ],
   npmDependencies: {
     "config-gitcrypt": "1.24.0",
-    "fs-extra": "2.0.0"
+    "fs-extra": "2.0.0",
+    // A breaking change was introduced in @babel/runtime@7.0.0-beta.56
+    // with the removal of the @babel/runtime/helpers/builtin directory.
+    // Since the compile-coffeescript plugin is bundled and published with
+    // a specific version of babel-compiler and babel-runtime, it also
+    // needs to have a reliable version of the @babel/runtime npm package,
+    // rather than delegating to the one installed in the application's
+    // node_modules directory, so the coffeescript package can work in
+    // Meteor 1.7.1 apps as well as 1.7.0.x and earlier.
+    '@babel/runtime': '7.0.0-beta.55'    
   }
 });
 
