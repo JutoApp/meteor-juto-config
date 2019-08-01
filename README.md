@@ -102,11 +102,36 @@ when your app is in production:
         "settingsDevelopment":"settings-development.json"
     }
     ```
-    
+ 
     This tells it to output a ```settings-production.json``` file and a 
     ```settings-development.json``` file,
     which you can pass to the ```meteor build```, ```meteor run ios``` or ```meteor run android``` commands.
+     
+    Alternatively, if your config is more complex than just `development` and `production`, you can specify an array of 
+    settings files to generate:
     
+    ```json
+    {
+      "configSourcePath" : "packages/juto-load-config/config",
+      "outputSettingsFiles":true,
+      "environments": [
+        {
+          "NODE_ENV": "production",
+          "outputFile": "settings-production.json"
+        },
+        {
+          "NODE_ENV": "development",
+          "outputFile": "settings-development.json"
+        },
+        {
+          "NODE_ENV": "development",
+          "HOST": "dev.ju.to",
+          "outputFile": "settings-dev-ju-to.json"
+        }
+      ]
+   }
+   ``` 
+       
     These files should not be used when running meteor in development mode 
     for a web browser; Simply run it without the settings flag and let your 
      ```server/load-config.js``` (above) do the work of deciding which settings 
