@@ -50,7 +50,9 @@ Plugin.registerCompiler({
         configToWrite.public = publicConfig;
         fs.writeJsonSync(fileOutputPath, configToWrite);
         process.env.NODE_ENV = oldProcessNodeEnv;
-        process.env.HOST = oldHost;
+        if (oldHost) {
+          process.env.HOST = oldHost;
+        }
       }
 
       if (file.getBasename() === "juto-settings-config.json") {
