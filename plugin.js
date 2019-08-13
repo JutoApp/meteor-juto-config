@@ -2,6 +2,7 @@
 // Meteor build plugin that loads config from private/config and writes output files according to settings-config.json
 // eslint-disable-next-line import/no-extraneous-dependencies
 const fs = require("fs-extra");
+const os = require("os");
 
 Plugin.registerCompiler({
   "extensions": ["json"],
@@ -34,7 +35,7 @@ Plugin.registerCompiler({
        */
       function loadConfigAndWriteOutput(nodeEnv, configSourcePath, fileOutputPath, host) {
         const oldProcessNodeEnv = process.env.NODE_ENV;
-        const oldHost = process.env.HOST;
+        const oldHost = os.hostname() || process.env.HOST;
 
         // eslint-disable-next-line global-require
         const jutoConfig = require("./config");
@@ -52,6 +53,8 @@ Plugin.registerCompiler({
         process.env.NODE_ENV = oldProcessNodeEnv;
         if (oldHost) {
           process.env.HOST = oldHost;
+        } else {
+          delete process.env.HOST;
         }
       }
 
