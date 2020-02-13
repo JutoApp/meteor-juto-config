@@ -11,6 +11,7 @@ Package.describe({
 });
 
 Npm.depends({
+  "config": "3.2.5",
   "fs-extra": "2.0.0"
 });
 
@@ -26,7 +27,7 @@ Package.registerBuildPlugin({
     "plugin.js"
   ],
   "npmDependencies": {
-    "config-gitcrypt": "1.24.0",
+    "config": "3.2.5",
     "fs-extra": "2.0.0",
     // A breaking change was introduced in @babel/runtime@7.0.0-beta.56
     // with the removal of the @babel/runtime/helpers/builtin directory.
