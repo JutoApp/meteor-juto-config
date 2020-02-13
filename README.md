@@ -7,9 +7,6 @@ allowing you to split your development and production meteor settings JSON.
 Based on the ideas from [4commerce:env-settings],
  this provides a meteor build plugin so that you can use it as part of a `meteor build` command.
 
-***NOTE: This package currently uses [config-gitcrypt] instead of [node-config] , 
- in order to provide [git-crypt] support.***
-
 [node-config]: https://www.npmjs.com/package/config
 [config-gitcrypt]: https://www.npmjs.com/package/config-gitcrypt
 [4commerce:env-settings]: https://github.com/4commerce-technologies-AG/meteor-package-env-settings
@@ -18,6 +15,15 @@ Based on the ideas from [4commerce:env-settings],
 [mupx]: https://github.com/arunoda/meteor-up/tree/mupx
 [pm2-meteor]: https://github.com/andruschka/pm2-meteor
 [git-crypt]:https://github.com/AGWA/git-crypt
+
+### Breaking Change
+
+NB: v3.0.0 requires you to manage your own npm version of [node-config].
+```
+meteor npm install config --save
+```
+
+It also allows `NODE_CONFIG` env vars to override settings from any files, which previously did not work with this plugin.
 
 ### Demo
 

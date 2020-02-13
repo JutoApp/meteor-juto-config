@@ -1,6 +1,6 @@
 // ==== node-config package, with suppressed warning.
 process.env.SUPPRESS_NO_CONFIG_WARNING = true;
-let config = require('config-gitcrypt');
+let config = require('config');
 process.env.SUPPRESS_NO_CONFIG_WARNING = false;
 
 
@@ -17,6 +17,18 @@ let path = require('path');
 export let JutoConfig = (folderPath) => {
   // now load the config from the asset path.
   let meteorConfig = config.util.loadFileConfigs(folderPath);
+  let envConfig = false;
+  if (process.env.NODE_CONFIG) {
+    // we've got some config in the env var. It should be added after the file-based config.
+    try {
+      envConfig = JSON.parse(process.env.NODE_CONFIG);
+      if (envConfig) {
+        _.deepExtend(meteorConfig, envConfig, true);
+      }
+    } catch (e) { // we couldn't parse it, just log the error and continue.
+      console.error(e);
+    }
+  }
 
   if (typeof Meteor !== "undefined") { // side-effect mode: updates Meteor.settings
 

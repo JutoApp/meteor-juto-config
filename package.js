@@ -1,6 +1,6 @@
 Package.describe({
   "name": "juto:config",
-  "version": "2.0.6",
+  "version": "3.0.0",
   // Brief, one-line summary of the package.
   "summary": "Use node config package for meteor settings.",
   // URL to the Git repository containing the source code for this package.
@@ -11,7 +11,6 @@ Package.describe({
 });
 
 Npm.depends({
-  "config-gitcrypt": "1.24.0",
   "fs-extra": "2.0.0"
 });
 
