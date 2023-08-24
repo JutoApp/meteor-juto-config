@@ -33,7 +33,7 @@ Package.registerBuildPlugin({
 });
 
 Package.onUse((api) => {
-  api.versionsFrom("1.4.2.3");
+  // api.versionsFrom("1.4.2.3");
   api.use("isobuild:compiler-plugin@1.0.0");
   api.use([
     "ecmascript",
