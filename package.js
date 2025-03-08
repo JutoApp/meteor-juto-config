@@ -19,8 +19,8 @@ Npm.depends({
 Package.registerBuildPlugin({
   "name": "compile-json-settings",
   "use": [
-    "ecmascript",
-    "underscore",
+    "ecmascript@0.16.8",
+    "underscore@1.6.1",
   ],
   "sources": [
     "config.js",
@@ -36,8 +36,8 @@ Package.onUse((api) => {
   // api.versionsFrom("1.4.2.3");
   api.use("isobuild:compiler-plugin@1.0.0");
   api.use([
-    "ecmascript",
-    "underscore"
+    "ecmascript@0.16.8",
+    "underscore@1.6.1",
   ]);
   api.mainModule("config.js", "server");
   api.export("JutoConfig");
