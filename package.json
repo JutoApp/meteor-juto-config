@@ -18,13 +18,11 @@
   "devDependencies": {
     "@babel/core": "^7.26.9",
     "@babel/preset-env": "^7.26.9",
-    "@commitlint/cli": "^19.7.1",
-    "@commitlint/config-conventional": "^19.7.1",
-    "@dotenvx/dotenvx": "^1.38.4",
-    "@types/lodash": "^4.17.16",
-    "@types/meteor": "^2.9.8",
-    "git-cliff": "^2.8.0",
-    "husky": "^9.1.7",
-    "release-it": "^17.11.0"
+    "@commitlint/cli": "^17.0.0",
+    "@commitlint/config-conventional": "^17.0.0",
+    "@dotenvx/dotenvx": "1.38.4",
+    "git-cliff": "2.0.4",
+    "husky": "8.0.3",
+    "release-it": "15.11.0"
   }
 }
