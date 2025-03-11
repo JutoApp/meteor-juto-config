@@ -1,13 +1,17 @@
+const fs = Npm.require("fs");
+const path = Npm.require("path");
+
+// try to obtain package metadata from package.json ; it's much easier to manage the version number this way
+// TODO: try to find a better way to obtain package metadata from package.json ; currently relying on a non-public _packageSource
+const packageJSON = JSON.parse(fs.readFileSync(path.join(Package._packageSource.sourceRoot, "package.json")));
+const { description, version, repository, readme } = packageJSON;
+
 Package.describe({
   "name": "juto:config",
-  "version": "4.0.0",
-  // Brief, one-line summary of the package.
-  "summary": "Use node config package for meteor settings.",
-  // URL to the Git repository containing the source code for this package.
-  "git": "https://github.com/JutoApp/meteor-juto-config.git",
-  // By default, Meteor will default to using README.md for documentation.
-  // To avoid submitting documentation, set this field to null.
-  "documentation": "README.md"
+  summary: description || "Use node config package for meteor settings.",
+  version: version || "4.0.0",
+  git: repository || "https://github.com/JutoApp/meteor-juto-config.git",
+  documentation: readme || "README.md"
 });
 
 Npm.depends({
