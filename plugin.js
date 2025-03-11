@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 // Meteor build plugin that loads config from private/config and writes output files according to settings-config.json
 // eslint-disable-next-line import/no-extraneous-dependencies
-const fs = require("fs-extra");
+const fs = require('fs-extra');
 const os = require("os");
 const { _ } = require("meteor/underscore");
 const underscore_deep = require("@cunneen/underscore.deep/dist/cjs/core.deep.js");

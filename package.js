@@ -12,23 +12,23 @@ Package.describe({
 
 Npm.depends({
   "config": "3.2.5",
-  "fs-extra": "2.0.0",
+  "fs-extra": "11.3.0",
   "@cunneen/underscore.deep": "1.0.0",
 });
 
 Package.registerBuildPlugin({
   "name": "compile-json-settings",
   "use": [
-    "ecmascript@0.16.8",
-    "underscore@1.6.1",
+    "ecmascript@0.0.0",
+    "underscore@1.0.0",
   ],
   "sources": [
     "config.js",
     "plugin.js"
   ],
   "npmDependencies": {
-    "config": "3.2.5",
-    "fs-extra": "2.0.0"
+    "config": "3.3.12",
+    "fs-extra": "11.3.0",
   }
 });
 
@@ -36,8 +36,8 @@ Package.onUse((api) => {
   // api.versionsFrom("1.4.2.3");
   api.use("isobuild:compiler-plugin@1.0.0");
   api.use([
-    "ecmascript@0.16.8",
-    "underscore@1.6.1",
+    "ecmascript@0.0.0",
+    "underscore@1.0.0",
   ]);
   api.mainModule("config.js", "server");
   api.export("JutoConfig");

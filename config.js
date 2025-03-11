@@ -4,7 +4,6 @@ let config = require('config');
 process.env.SUPPRESS_NO_CONFIG_WARNING = false;
 
 
-let fs = require('fs-extra');
 let path = require('path');
 const { _ } = require("meteor/underscore");
 const underscore_deep = require("@cunneen/underscore.deep/dist/cjs/core.deep.js");
