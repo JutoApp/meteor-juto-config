@@ -1,6 +1,6 @@
 {
   "name": "juto-config",
-  "version": "4.0.1",
+  "version": "4.0.3",
   "summary": "Use node config package for meteor settings.",
   "repository": "https://github.com/JutoApp/meteor-juto-config.git",
   "readme": "README.md",

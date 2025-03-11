@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## 4.0.3 - 2025-03-11
+
+[98f51ac](98f51ac83c1f398a00620221767a78213f7ac5e1)...[171dd94](171dd94904f0af666368816f65da2a850d01d510)
+
+### Miscellaneous Tasks
+
+- :arrow_down: downgrade package.json deps ([e4fc65e](e4fc65eaba3f523c659ee1312846c61eeb584888))
+- :pushpin: package-lock.json ([171dd94](171dd94904f0af666368816f65da2a850d01d510))
+
 ## 4.0.0 - 2025-03-08
 
 ### Other (unconventional)
