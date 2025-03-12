@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## 4.0.5 - 2025-03-12
+
+[c6d9b1f](c6d9b1f45c45fa00181bb68e63f150881857b24d)...[9b39957](9b3995760eb134fda75afcda2fc40156070a24ed)
+
+### Bug Fixes
+
+- :memo: fix incorrect package description ([9b39957](9b3995760eb134fda75afcda2fc40156070a24ed))
+
 ## 4.0.4 - 2025-03-12
 
 [f7a76c4](f7a76c4cc2637d402c01746b7daa6be5f9c080bb)...[85e99c5](85e99c5f5777d7b8af8a901d7c4b80f171a20bdb)
