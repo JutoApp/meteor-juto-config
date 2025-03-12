@@ -12,7 +12,7 @@
     },
     "hooks": {
       "after:bump": "yarn run release-changelog ${version}",
-      "after:release": "meteor publish"
+      "after:release": "rm -rf node_modules && meteor publish"
     }
   }
 
