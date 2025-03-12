@@ -1,10 +1,9 @@
 {
   "name": "juto-config",
   "version": "4.0.4",
-  "summary": "Use node config package for meteor settings.",
   "repository": "https://github.com/JutoApp/meteor-juto-config.git",
   "readme": "README.md",
-  "description": "Reactive tooltips for Meteor, no coffee required",
+  "description": "Use node config package for meteor settings",
   "scripts": {
     "release-changelog": "git-cliff --unreleased --prepend CHANGELOG.md --tag ",
     "release": "dotenvx run release-it -- -i -u",
