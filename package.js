@@ -15,7 +15,7 @@ Package.describe({
 });
 
 Npm.depends({
-  "config": "3.2.5",
+  "config": "3.3.12",
   "fs-extra": "11.3.0",
   "@cunneen/underscore.deep": "1.0.0",
 });
