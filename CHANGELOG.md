@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file.
 
+## 4.0.4 - 2025-03-12
+
+[f7a76c4](f7a76c4cc2637d402c01746b7daa6be5f9c080bb)...[85e99c5](85e99c5f5777d7b8af8a901d7c4b80f171a20bdb)
+
+### Bug Fixes
+
+- :bug: error: Cannot find module 'json5' ([1557e70](1557e70375f0aef3ff982c1d4a9bb8fe584b3b84))
+
+### Miscellaneous Tasks
+
+- :see_no_evil: gitignore : dont ignore .npm subfolder ([b1e5b6d](b1e5b6de83a8bd53454c2b477023ae18b32a2425))
+- :coffin: remove .npm/.package-garbage-* ([a666034](a6660344a4310092b8bfcd1e4c261a46dedc747f))
+- :green_heart: release-it : meteor publish : remove node_modules before publish ([85e99c5](85e99c5f5777d7b8af8a901d7c4b80f171a20bdb))
+
+### Build
+
+- :arrow_up: update devDependencies: node >20 required ([3315800](3315800a3c3db70ce4f0bd5fd469e99fa0df3a52))
+
 ## 4.0.3 - 2025-03-11
 
 [98f51ac](98f51ac83c1f398a00620221767a78213f7ac5e1)...[171dd94](171dd94904f0af666368816f65da2a850d01d510)
